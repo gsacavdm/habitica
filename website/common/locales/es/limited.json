@@ -84,9 +84,10 @@
     "stitchWitchSet": "Bruja de Cocer (Mago)",
     "potionerSet": "Pocionador (Sanador) ",
     "battleRogueSet": "Pícaro Bate-talla (Pícaro)",
-    "fallEventAvailability": "Disponible para la compra a partir del 31 de Octubre.",
-    "winterEventAvailability": "Disponible para su compra hasta el 31 de enero",
-    "springEventAvailability": "Disponible para la compra a partir del 31 de Mayo.",
-    "summerEventAvailability": "Disponible para la compra a partir del 31 de Agosto.",
-    "valentinesEventAvailability": "Disponible para su compra hasta el 28 de febrero."
+    "springingBunnySet": "Conjito de resorte (Sanador)",
+    "grandMalkinSet": "Gran Felino (Mago)",
+    "cleverDogSet": "Perro Listo (Pícaro)",
+    "braveMouseSet": "Ratón Valiente (Guerrero)",
+    "eventAvailability": "Disponible para su compra hasta el <%= date(locale) %>.",
+    "dateEndApril": "19 de abril"
 }

@@ -84,9 +84,10 @@
     "stitchWitchSet": "Stitch Witch (Mage)",
     "potionerSet": "רוקח שיקויים (מרפא)",
     "battleRogueSet": "Bat-tle Rogue (Rogue)",
-    "fallEventAvailability": "זמין לרכישה עד ה 31 באוקטובר.",
-    "winterEventAvailability": "Available for purchase until January 31.",
-    "springEventAvailability": "זמין לרכישה עד ה 31 במאי.",
-    "summerEventAvailability": "זמין לרכישה עד ה 31 באוגוסט.",
-    "valentinesEventAvailability": "Available for purchase until February 28."
+    "springingBunnySet": "Springing Bunny (Healer)",
+    "grandMalkinSet": "Grand Malkin (Mage)",
+    "cleverDogSet": "Clever Dog (Rogue)",
+    "braveMouseSet": "Brave Mouse (Warrior)",
+    "eventAvailability": "Available for purchase until <%= date(locale) %>.",
+    "dateEndApril": "April 19"
 }

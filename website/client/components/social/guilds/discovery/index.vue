@@ -1,47 +1,74 @@
 <template lang="pug">
-.ui.grid
-  .three.wide.column
-    .ui.left.icon.input
-      i.search.icon
-      input(type="text", :placeholder="$t('search')")
-    h3(v-once) {{ $t('filter') }}
+.row
+  .col-3
+    .form-group
+      input.form-control(type="text", :placeholder="$t('search')")
+    
+    form
+      h3(v-once) {{ $t('filter') }}
 
-    .ui.form
-      h4 Interests
-      .field
-        .ui.checkbox
-          input(type="checkbox")
-          label(v-once) Habitica Official
-      .field
-        .ui.checkbox
-          input(type="checkbox")
-          label(v-once) Nature
-      .field
-        .ui.checkbox
-          input(type="checkbox")
-          label(v-once) Animals
+      .form-group
+        h5 Interests
+        .form-check
+          .label.form-check-label
+            input.form-check-input(type="checkbox")
+            span Habitica Official
+        .form-check
+          .label.form-check-label
+            input.form-check-input(type="checkbox")
+            span Nature
+        .form-check
+          .label.form-check-label
+            input.form-check-input(type="checkbox")
+            span Animals
 
-  .thirteen.wide.column
+  .col-9
     h2(v-once) {{ $t('publicGuilds') }}
     public-guild-item(v-for="guild in guilds", :key='guild._id', :guild="guild")
+    mugen-scroll(
+      :handler="fetchGuilds", 
+      :should-handle="loading === false && hasLoadedAllGuilds === false", 
+      :handle-on-mount="false",
+      v-show="hasLoadedAllGuilds === false",
+    )
+      span loading...
 </template>
 
 <script>
-import { mapState, mapActions } from '../../../../store';
+import axios from 'axios';
+import MugenScroll from 'vue-mugen-scroll';
 import PublicGuildItem from './publicGuildItem';
+import { GUILDS_PER_PAGE } from 'common/script/constants';
 
 export default {
-  components: { PublicGuildItem },
-  computed: {
-    ...mapState(['guilds']),
-  },
-  methods: {
-    ...mapActions({
-      fetchGuilds: 'guilds:fetchAll',
-    }),
+  components: { PublicGuildItem, MugenScroll },
+  data () {
+    return {
+      loading: false,
+      hasLoadedAllGuilds: false,
+      lastPageLoaded: 0,
+      guilds: [],
+    };
   },
   created () {
-    if (!this.guilds) this.fetchGuilds();
+    this.fetchGuilds();
+  },
+  methods: {
+    async fetchGuilds () {
+      this.loading = true;
+      let response = await axios.get('/api/v3/groups', {
+        params: {
+          type: 'publicGuilds',
+          paginate: true,
+          page: this.lastPageLoaded,
+        },
+      });
+      let guilds = response.data.data;
+      this.guilds.push(...guilds);
+      if (guilds.length < GUILDS_PER_PAGE) this.hasLoadedAllGuilds = true;
+      this.lastPageLoaded++;
+      this.loading = false;
+    },
   },
 };
 </script>

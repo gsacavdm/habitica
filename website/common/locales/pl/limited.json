@@ -84,9 +84,10 @@
     "stitchWitchSet": "Zszyty czarownik (Mag)",
     "potionerSet": "Mistrz Eliksirów (Uzdrowiciel)",
     "battleRogueSet": "Nietoperzy Łotrzyk (Łotrzyk)",
-    "fallEventAvailability": "Dostępne w sprzedaży do 31 października.",
-    "winterEventAvailability": "Dostępne w sprzedaży do 31 stycznia.",
-    "springEventAvailability": "Dostępne w sprzedaży do 31 maja.",
-    "summerEventAvailability": "Dostępne w sprzedaży do 31 sierpnia.",
-    "valentinesEventAvailability": "Dostępne w sprzedaży do 28 lutego."
+    "springingBunnySet": "Springing Bunny (Healer)",
+    "grandMalkinSet": "Grand Malkin (Mage)",
+    "cleverDogSet": "Clever Dog (Rogue)",
+    "braveMouseSet": "Brave Mouse (Warrior)",
+    "eventAvailability": "Available for purchase until <%= date(locale) %>.",
+    "dateEndApril": "April 19"
 }

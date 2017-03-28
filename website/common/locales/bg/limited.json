@@ -84,9 +84,10 @@
     "stitchWitchSet": "Шиеща вещица (магьосник)",
     "potionerSet": "Отвараджия (лечител)",
     "battleRogueSet": "Боен мошеник (мошеник)",
-    "fallEventAvailability": "Налично за купуване до 31-ви октомври.",
-    "winterEventAvailability": "Налично за купуване до 31-ви януари.",
-    "springEventAvailability": "Налично за купуване до 31-ви май.",
-    "summerEventAvailability": "Налично за купуване до 31-ви август.",
-    "valentinesEventAvailability": "Налично за купуване до 28-ми февруари."
+    "springingBunnySet": "Подскачащо зайче (лечител)",
+    "grandMalkinSet": "Големия Малкин (магьосник)",
+    "cleverDogSet": "Умно куче (мошеник)",
+    "braveMouseSet": "Смела мишка (воин)",
+    "eventAvailability": "Налично за купуване до <%= date(locale) %>.",
+    "dateEndApril": "19 април"
 }

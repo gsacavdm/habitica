@@ -22,9 +22,10 @@
     "mantisShrimp": "Crevette-mante",
     "mammoth": "Mammouth Laineux",
     "orca": "Orque",
-    "royalPurpleGryphon": "Griffon Pourpre Royal",
+    "royalPurpleGryphon": "Griffon Pourpre royal",
     "phoenix": "Phénix",
     "magicalBee": "Abeille féerique",
+    "royalPurpleJackalope": "Léporilope Pourpre royal",
     "rarePetPop1": "Cliquez sur l'empreinte dorée pour savoir comment obtenir cet animal rare en contribuant à Habitica !",
     "rarePetPop2": "Comment obtenir ce Familier !",
     "potion": "Potion <%= potionType %>",
@@ -93,6 +94,6 @@
     "mountsAndPetsReleased": "Montures et familiers libérés",
     "mountsReleased": "Montures libérées",
     "gemsEach": "gemmes chacun",
-    "foodWikiText": "Quelle est la nourriture préférée de mon Familier ?",
-    "foodWikiUrl": "http://fr.habitica.wikia.com/wiki//Préférences_alimentaires"
+    "foodWikiText": "Quelle est la nourriture préférée de mon familier ?",
+    "foodWikiUrl": "http://fr.habitica.wikia.com/wiki/Préférences_alimentaires"
 }
